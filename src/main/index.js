@@ -21,44 +21,41 @@ function MainPage() {
 
   return (
     <div>
-      <div id="header">
-        <div id="header-area">
-          <img src="images/icons/logo.png" alt="마켓 로고" />
-        </div>
+      <div id="banner">
+        <span>#오포차 #오자카야 #오마카세 #주인이술더먹음 #꽐라제조업소</span>
       </div>
-      <div id="body">
-        <div id="banner">
-          <img src="images/banners/banner1.png" alt="배너 이미지" />
-        </div>
 
-        <h1>판매되는 상품들</h1>
+      <h2>판매되는 상품들</h2>
 
-        <div id="product-list">
-          {products.map(function (product, index) {
-            return (
-              <div className="product-card">
-                <Link className="product-link" to={"/product/" + index}>
-                  <div>
-                    <img className="product-img" src={product.imageUrl} />
+      <div id="product-list">
+        {products.map(function (product, index) {
+          return (
+            <div className="product-card">
+              <Link className="product-link" to={"/product/" + product.id}>
+                <div>
+                  <img
+                    className="product-img"
+                    src={product.imageUrl}
+                    alt="상품 이미지"
+                  />
+                </div>
+                <div className="product-contents">
+                  <span className="product-name">{product.name}</span>
+                  <span className="product-price">{product.price}원</span>
+                  <div className="product-seller">
+                    <img
+                      className="product-avatar"
+                      src="images/icons/cooker.png"
+                      alt="판매자 아이콘"
+                    />
+                    <span>{product.seller}</span>
                   </div>
-                  <div className="product-contents">
-                    <span className="product-name">{product.name}</span>
-                    <span className="product-price">{product.price}원</span>
-                    <div className="product-seller">
-                      <img
-                        className="product-avatar"
-                        src="images/icons/avatar.png"
-                      />
-                      <span>{product.seller}</span>
-                    </div>
-                  </div>
-                </Link>
-              </div>
-            );
-          })}
-        </div>
+                </div>
+              </Link>
+            </div>
+          );
+        })}
       </div>
-      <div id="footer"></div>
     </div>
   );
 }
