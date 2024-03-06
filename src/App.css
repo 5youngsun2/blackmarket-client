@@ -18,9 +18,15 @@ body,
   border-bottom: 1px solid gray;
 }
 
+#header-area > span {
+  font-size: 30px;
+  font-weight: 600;
+}
+
 #body {
-  height: 100vh;
-  width: 1300px;
+  min-height: 100vh;
+  max-width: 1300px;
+  width: 100%;
   margin: 0 auto;
   padding-bottom: 30px;
 }
@@ -41,4 +47,34 @@ body,
 #header-area img {
   width: 180px;
   height: 100%;
+}
+
+@media screen and (max-width: 700px) {
+  .product-card {
+    width: 150px !important;
+    height: 250px !important;
+  }
+  .product-img {
+    height: 100px !important;
+    object-fit: contain;
+  }
+  .product-contents {
+    width: 95% !important;
+    height: 100px !important;
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+  }
+  #header {
+    padding: 0 8px;
+  }
+  #body {
+    padding: 0 8px;
+  }
+  .ant-carousel {
+    margin: 0 -8px;
+  }
+  #banner {
+    margin: 0 -8px;
+  }
 }
