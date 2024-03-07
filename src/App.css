@@ -58,13 +58,7 @@ body,
     height: 100px !important;
     object-fit: contain;
   }
-  .product-contents {
-    width: 95% !important;
-    height: 100px !important;
-    display: flex;
-    flex-direction: column;
-    padding: 8px;
-  }
+
   #header {
     padding: 0 8px;
   }
